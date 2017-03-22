@@ -4,7 +4,7 @@
 ** \date 2017/03/21
 ** \copyright BSD 3-Clause License (c) 2017, SMFSW
 ** \brief Sequential Button Arduino Library
-** \description Handling filtered button press with callbacks for push (with or without repeat) and release, logic and filtering time
+** \details Handling filtered button press with callbacks for push (with or without repeat) and release, logic and filtering time
 **/
 
 
