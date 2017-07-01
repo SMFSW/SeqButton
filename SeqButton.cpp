@@ -1,7 +1,7 @@
 /*!\file SeqButton.cpp
 ** \author SMFSW
-** \version 1.0
-** \date 2017/03/21
+** \version 1.1
+** \date 2017/06/29
 ** \copyright BSD 3-Clause License (c) 2017, SMFSW
 ** \brief Sequential Button Arduino Library
 ** \details Handling filtered button press with callbacks for push (with or without repeat) and release, logic and filtering time
@@ -58,7 +58,7 @@ bool SeqButton::handler(void)
 	
 	if (digitalRead(Pin) == Logic)
 	{
-		if ((TIME - memTime) >= timFilter)
+		if ((uint16_t) (TIME - memTime) >= timFilter)
 		{
 			relDone = false;
 			butState = HIGH;
