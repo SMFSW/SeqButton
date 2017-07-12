@@ -1,7 +1,7 @@
 /*!\file SeqButton.cpp
 ** \author SMFSW
-** \version 1.1
-** \date 2017/06/29
+** \version 1.2
+** \date 2017/07/12
 ** \copyright BSD 3-Clause License (c) 2017, SMFSW
 ** \brief Sequential Button Arduino Library
 ** \details Handling filtered button press with callbacks for push (with or without repeat) and release, logic and filtering time
@@ -9,9 +9,9 @@
 
 
 #if ARDUINO > 22
-#include <Arduino.h> 
+#include <Arduino.h>
 #else
-#include <WProgram.h> 
+#include <WProgram.h>
 #endif
 
 #if defined(DBG_SEQBUTTON)

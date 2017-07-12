@@ -1,7 +1,7 @@
 /*!\file SeqButton.h
 ** \author SMFSW
-** \version 1.1
-** \date 2017/06/29
+** \version 1.2
+** \date 2017/07/12
 ** \copyright BSD 3-Clause License (c) 2017, SMFSW
 ** \brief Sequential Button Arduino Library
 ** \details Handling filtered button press with callbacks for push (with or without repeat) and release, logic and filtering time
@@ -28,7 +28,7 @@ private:
 	
 	uint8_t		Pin;				//!< Pin on which button is connected
 	uint16_t	timFilter;			//!< Filtering time (in ms)
-	bool		Logic;				//!< Button logic: LOW for NO / HIGH for NC  (internal pullup for input is enabled)
+	bool		Logic;				//!< Button logic: LOW for NO / HIGH for NC (internal pullup for input is enabled)
 	bool		Repeat;				//!< Push callback repeated calls
 	
 	void		(*onPush)();		//!< Push callback ON function pointer
