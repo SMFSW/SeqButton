@@ -1,7 +1,7 @@
 /*!\file SeqButton.cpp
 ** \author SMFSW
-** \version 1.2
-** \date 2017/07/12
+** \version 1.3
+** \date 2017/11/21
 ** \copyright BSD 3-Clause License (c) 2017, SMFSW
 ** \brief Sequential Button Arduino Library
 ** \details Handling filtered button press with callbacks for push (with or without repeat) and release, logic and filtering time
@@ -20,10 +20,10 @@
 
 #include "SeqButton.h"
 
-#define		TIME	((uint16_t) millis())
+#define		TIME	millis()
 
 
-void SeqButton::init(uint8_t pin, void (*cbckON)(), void (*cbckOFF)(), bool repeat, bool logic, uint16_t filter)
+void SeqButton::init(const uint8_t pin, void (*cbckON)(void), void (*cbckOFF)(void), const bool repeat, const bool logic, const uint32_t filter)
 {
 	#if defined(DBG_SEQBUTTON)
 		Serial.begin(115200);
@@ -45,7 +45,7 @@ void SeqButton::init(uint8_t pin, void (*cbckON)(), void (*cbckOFF)(), bool repe
 	memTime = TIME;
 }
 
-void SeqButton::init(uint8_t pin, void (*cbckON)(), void (*cbckOFF)())
+void SeqButton::init(const uint8_t pin, void (*cbckON)(void), void (*cbckOFF)(void))
 {
 	init(pin, cbckON, cbckOFF, false, LOW, 50);
 }
@@ -58,7 +58,7 @@ bool SeqButton::handler(void)
 	
 	if (digitalRead(Pin) == Logic)
 	{
-		if ((uint16_t) (TIME - memTime) >= timFilter)
+		if (TIME - memTime >= timFilter)
 		{
 			relDone = false;
 			butState = HIGH;

@@ -1,7 +1,7 @@
 /*!\file SeqButton.h
 ** \author SMFSW
-** \version 1.2
-** \date 2017/07/12
+** \version 1.3
+** \date 2017/11/21
 ** \copyright BSD 3-Clause License (c) 2017, SMFSW
 ** \brief Sequential Button Arduino Library
 ** \details Handling filtered button press with callbacks for push (with or without repeat) and release, logic and filtering time
@@ -21,13 +21,13 @@
 class SeqButton
 {
 private:
-	uint16_t	memTime;			//!< Previously recorded timer
+	uint32_t	memTime;			//!< Previously recorded timer
 	bool		butState;			//!< Memorised button state
 	bool		pusDone;			//!< ON function already called
 	bool		relDone;			//!< OFF function already called
 	
 	uint8_t		Pin;				//!< Pin on which button is connected
-	uint16_t	timFilter;			//!< Filtering time (in ms)
+	uint32_t	timFilter;			//!< Filtering time (in ms)
 	bool		Logic;				//!< Button logic: LOW for NO / HIGH for NC (internal pullup for input is enabled)
 	bool		Repeat;				//!< Push callback repeated calls
 	
@@ -45,7 +45,7 @@ public:
 	**	\param [in] filter - filtering time (in ms)
 	**	\return nothing
 	**/
-	void init(uint8_t pin, void (*cbckON)(), void (*cbckOFF)(), bool repeat, bool logic=LOW, uint16_t filter=50);
+	void init(const uint8_t pin, void (*cbckON)(void), void (*cbckOFF)(void), const bool repeat, const bool logic=LOW, const uint32_t filter=50);
 	
 	/*!	\brief Initialisation routine
 	**	\note Input pin is configured with device internal pullup
@@ -54,7 +54,7 @@ public:
 	**	\param [in] cbckOFF - callback function on release (NULL when no callback needed)
 	**	\return nothing
 	**/
-	void init(uint8_t pin, void (*cbckON)(), void (*cbckOFF)()=NULL);
+	void init(uint8_t pin, void (*cbckON)(void), void (*cbckOFF)(void)=NULL);
 	
 	/*!	\brief Check button state and perform callbacks accordingly
 	**	\note handler for button, this function has to be called in a pseudo main loop to work properly
@@ -66,8 +66,7 @@ public:
 	**	\return Current button state
 	**/
 	bool getButton(void) __attribute__((always_inline)) {
-		return butState;
-	}
+		return butState; }
 };
 
 
