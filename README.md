@@ -23,8 +23,10 @@ Handling filtered button press with callbacks for push (with or without repeat) 
 
 - AdvancedButton.ino: Toggle a LED at each button press (showing all init parameters)
 - CallbacksExample.ino: Toggle a LED at each push on button 1 and at each release on button 2
+- CombinationExample.ino: Prints messages to serial depending on combination read from inputs
 - OffTimerButton.ino: Turns a LED on when button is pressed, turnig off 1s after releae
 - RepeatButton.ino: Toggle a LED repeatedly when button pressed
+- SequenceExample.ino: Prints messages to serial depending on sequence read from inputs
 - ToggleButton.ino: Toggle a LED at each button press
 
 ## Misc
