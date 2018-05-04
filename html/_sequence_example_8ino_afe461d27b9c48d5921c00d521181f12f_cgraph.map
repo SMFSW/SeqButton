@@ -1,0 +1,6 @@
+<map id="loop" name="loop">
+<area shape="rect" id="node2" href="$class_seq_button.html#a2c9fe3939aed58f55a64ea0267e70b83" title="Check button state and perform callbacks accordingly. " alt="" coords="101,5,235,32"/>
+<area shape="rect" id="node3" href="$_sequence_example_8ino.html#a4524d1f124ed97feaf42018238b8587c" title="sequence_handler" alt="" coords="105,56,231,83"/>
+<area shape="rect" id="node4" href="$_sequence_example_8ino.html#aefbeed7d4519895fcaf80262256a5532" title="sequence_find" alt="" coords="283,56,389,83"/>
+<area shape="rect" id="node5" href="$_sequence_example_8ino.html#a4bda7e667e8e48834078a75ba5dae9bb" title="sequence_reset" alt="" coords="437,56,552,83"/>
+</map>
