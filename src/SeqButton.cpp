@@ -1,6 +1,5 @@
 /*!\file SeqButton.cpp
 ** \author SMFSW
-** \version 1.3
 ** \date 2017/11/21
 ** \copyright BSD 3-Clause License (c) 2017, SMFSW
 ** \brief Sequential Button Arduino Library

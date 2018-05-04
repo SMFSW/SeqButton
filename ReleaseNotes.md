@@ -9,6 +9,9 @@ Feel free to share your thoughts @ xgarmanboziax@gmail.com about:
 ------------
 
 ** Actual:
+v1.4	3 May 2018:
+- Adding support for unit tests and doxygen documentation generation with Travis CI
+- Updated README.md
 
 v1.3.1	20 Jan 2018:
 - Added 2 more complex examples (combination & sequence detection)

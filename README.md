@@ -1,40 +1,39 @@
-# SeqButton
+# SeqButton [![Build Status](https://travis-ci.org/SMFSW/SeqButton.svg?branch=master)](https://travis-ci.org/SMFSW/SeqButton)
 
 Sequential Button Arduino Library
 
-Handling filtered button press with callbacks for push (with or without repeat) and release, logic and filtering time.
-
+Handling filtered button press with callbacks for push (with or without repeat) and release, logic, filtering time and sequences.
 
 ## Usage
 
-- Declare a SeqButton instance (called _sb_ below)
-- Create callback function(s) of type _void func()_
-- Initialise instance with _sb.init(uint8_t pin, void (*cbckON)(), void (*cbckOFF)(), bool repeat, bool logic=LOW, uint16_t filter=50)_
-  - pin - Pin on which button is connected
-  - cbckON: callback function on press (NULL when no callback needed)
-  - cbckOFF: callback function on release (NULL when no callback needed)
-  - repeat: callback called repeatedly when set to true
-  - logic: Button logic: LOW for NO / HIGH for NC (internal pullup for input is enabled)
-  - filter: filtering time (in ms)
-- Call the handler in a loop using _sb.handler()_ -> handler returns the current button value (if needed)
-- _sb.getButton()_ can be used to get current button state at any time
+- Declare a `SeqButton` instance (called `sb` below)
+- Create callback function(s) of type `void func()`
+- Initialize instance with `sb.init(uint8_t pin, void (*cbckON)(), void (*cbckOFF)(), bool repeat, bool logic=LOW, uint16_t filter=50)`
+  - `pin`: pin on which button is connected
+  - `cbckON`: callback function on press (`NULL` when no callback needed)
+  - `cbckOFF`: callback function on release (`NULL` when no callback needed)
+  - `repeat`: callback called repeatedly when set to true
+  - `logic`: Button logic: `LOW` for NO / `HIGH` for NC (internal pullup for input is enabled)
+  - `filter`: filtering time (in ms)
+- Call the handler in a loop using `sb.handler()` -> handler returns the current button value (if needed)
+- `sb.getButton()` can be used to get current button state at any time
 
 ## Examples included
 
-- AdvancedButton.ino: Toggle a LED at each button press (showing all init parameters)
-- CallbacksExample.ino: Toggle a LED at each push on button 1 and at each release on button 2
-- CombinationExample.ino: Prints messages to serial depending on combination read from inputs
-- OffTimerButton.ino: Turns a LED on when button is pressed, turnig off 1s after releae
-- RepeatButton.ino: Toggle a LED repeatedly when button pressed
-- SequenceExample.ino: Prints messages to serial depending on sequence read from inputs
-- ToggleButton.ino: Toggle a LED at each button press
+- [AdvancedButton.ino](examples/AdvancedButton/AdvancedButton.ino): Toggle a LED at each button press (showing all init parameters)
+- [CallbacksExample.ino](examples/CallbacksExample/CallbacksExample.ino): Toggle a LED at each push on button 1 and at each release on button 2
+- [CombinationExample.ino](examples/CombinationExample/CombinationExample.ino): Prints messages to serial depending on combination read from inputs
+- [OffTimerButton.ino](examples/OffTimerButton/OffTimerButton.ino): Turns a LED on when button is pressed, turning off 1s after release
+- [RepeatButton.ino](examples/RepeatButton/RepeatButton.ino): Toggle a LED repeatedly when button pressed
+- [SequenceExample.ino](examples/SequenceExample/SequenceExample.ino): Prints messages to serial depending on sequence read from inputs
+- [ToggleButton.ino](examples/ToggleButton/ToggleButton.ino): Toggle a LED at each button press
 
-## Misc
+## Documentation
 
-Doxygen doc can be generated for the class using doxyfile.
+Doxygen doc can be generated using "Doxyfile".
 
-Feel free to share your thoughts @ xgarmanboziax@gmail.com about:
+See [generated documentation](https://smfsw.github.io/SeqButton/)
 
-- issues encountered
-- optimisations
-- improvements & new functionalities
+## Release Notes
+
+See [release notes](ReleaseNotes.md)

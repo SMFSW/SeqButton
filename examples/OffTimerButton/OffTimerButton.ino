@@ -1,6 +1,6 @@
 /*
   Off Timer Button
-  Turns a LED on when button is pressed, turnig off 1s after release
+  Turns a LED on when button is pressed, turning off 1s after release
 
   Most Arduinos have an on-board LED you can control. On the Uno and
   Leonardo, it is attached to digital pin 13. If you're unsure what
