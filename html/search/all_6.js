@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['k1',['k1',['../_sequence_example_8ino.html#aa786777ce0a77f3d766d53dfa93da3d7',1,'SequenceExample.ino']]],
-  ['k2',['k2',['../_sequence_example_8ino.html#a6d1b20b7746f8fe1eb340b8b6bf08a9e',1,'SequenceExample.ino']]],
-  ['k3',['k3',['../_sequence_example_8ino.html#a0d5999b0939a7ef7c0ba416f475ccf40',1,'SequenceExample.ino']]]
+  ['idx_5fseq_5ftab',['idx_seq_tab',['../_sequence_example_8ino.html#a0ba542da2dec7cf4aad966dc06b4ed80',1,'SequenceExample.ino']]],
+  ['init',['init',['../class_seq_button.html#ad6feb68ebf7aeca0939fcd3b97ff5c12',1,'SeqButton::init(const uint8_t pin, void(*cbckON)(uint8_t), void(*cbckOFF)(uint8_t), const bool repeat, const bool logic=LOW, const uint32_t filter=50)'],['../class_seq_button.html#a26307295a40457c9eee3fdf8a69e851e',1,'SeqButton::init(uint8_t pin, void(*cbckON)(uint8_t), void(*cbckOFF)(uint8_t)=NULL)']]]
 ];

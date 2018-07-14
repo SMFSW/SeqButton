@@ -1,3 +1,5 @@
 <map id="setup" name="setup">
-<area shape="rect" id="node2" href="$class_seq_button.html#a1103c2f3624a604acf7597efedb826ac" title="Initialisation routine. " alt="" coords="110,5,218,32"/>
+<area shape="rect" id="node2" href="$class_seq_button.html#ad6feb68ebf7aeca0939fcd3b97ff5c12" title="Initialization routine. " alt="" coords="142,5,250,32"/>
+<area shape="rect" id="node3" href="$_combination_example_8ino.html#a4d245a105b334cb92e35efd4e753c924" title="SetCombination_cback" alt="" coords="117,56,275,83"/>
+<area shape="rect" id="node4" href="$_combination_example_8ino.html#ab14e9893b347a75c3ad7a108930d83b4" title="ResetCombination_cback" alt="" coords="110,107,282,133"/>
 </map>

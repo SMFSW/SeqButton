@@ -1,4 +1,4 @@
 <map id="setup" name="setup">
-<area shape="rect" id="node2" href="$class_seq_button.html#a1103c2f3624a604acf7597efedb826ac" title="Initialisation routine. " alt="" coords="110,5,218,32"/>
-<area shape="rect" id="node3" href="$_repeat_button_8ino.html#a7cc7a19f0091ab1f650f7d4bfc17eb7e" title="ToggleLED" alt="" coords="121,56,207,83"/>
+<area shape="rect" id="node2" href="$class_seq_button.html#ad6feb68ebf7aeca0939fcd3b97ff5c12" title="Initialization routine. " alt="" coords="110,5,218,32"/>
+<area shape="rect" id="node3" href="$_repeat_button_8ino.html#a7cea88b30492d4a017a8e81df81f6f1a" title="ToggleLED" alt="" coords="121,56,207,83"/>
 </map>
