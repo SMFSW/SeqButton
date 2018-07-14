@@ -1,5 +1,6 @@
 /*!\file SeqButton.h
 ** \author SMFSW
+** \version 1.3
 ** \date 2017/11/21
 ** \copyright BSD 3-Clause License (c) 2017, SMFSW
 ** \brief Sequential Button Arduino Library
@@ -30,8 +31,8 @@ private:
 	bool		Logic;				//!< Button logic: LOW for NO / HIGH for NC (internal pullup for input is enabled)
 	bool		Repeat;				//!< Push callback repeated calls
 	
-	void		(*onPush)();		//!< Push callback ON function pointer
-	void		(*onRelease)();		//!< Push callback OFF function pointer
+	void		(*onPush)(uint8_t);		//!< Push callback ON function pointer
+	void		(*onRelease)(uint8_t);		//!< Push callback OFF function pointer
 
 public:
 	/*!	\brief Initialisation routine
@@ -44,7 +45,7 @@ public:
 	**	\param [in] filter - filtering time (in ms)
 	**	\return nothing
 	**/
-	void init(const uint8_t pin, void (*cbckON)(void), void (*cbckOFF)(void), const bool repeat, const bool logic=LOW, const uint32_t filter=50);
+	void init(const uint8_t pin, void (*cbckON)(uint8_t), void (*cbckOFF)(uint8_t), const bool repeat, const bool logic=LOW, const uint32_t filter=50);
 	
 	/*!	\brief Initialisation routine
 	**	\note Input pin is configured with device internal pullup
@@ -66,6 +67,12 @@ public:
 	**/
 	bool getButton(void) __attribute__((always_inline)) {
 		return butState; }
+
+	/*!	\brief Get button pin
+	**	\return Current button pin
+	**/
+	uint8_t getPin(void) __attribute__((always_inline)) {
+		return Pin; }
 };
 
 
