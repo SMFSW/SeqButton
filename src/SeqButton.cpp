@@ -1,5 +1,6 @@
 /*!\file SeqButton.cpp
 ** \author SMFSW
+** \version 1.3
 ** \date 2017/11/21
 ** \copyright BSD 3-Clause License (c) 2017, SMFSW
 ** \brief Sequential Button Arduino Library
@@ -22,7 +23,7 @@
 #define		TIME	millis()
 
 
-void SeqButton::init(const uint8_t pin, void (*cbckON)(void), void (*cbckOFF)(void), const bool repeat, const bool logic, const uint32_t filter)
+void SeqButton::init(const uint8_t pin, void (*cbckON)(uint8_t), void (*cbckOFF)(uint8_t), const bool repeat, const bool logic, const uint32_t filter)
 {
 	#if defined(DBG_SEQBUTTON)
 		Serial.begin(115200);
@@ -69,7 +70,7 @@ bool SeqButton::handler(void)
 						Serial.print("Push\n");
 						dbg = true;
 					#endif
-					onPush();
+					onPush(Pin);
 				}
 			}
 			if (!Repeat)	{ pusDone = true; }
@@ -84,7 +85,7 @@ bool SeqButton::handler(void)
 		if (!relDone)
 		{
 			relDone = true;
-			if (onRelease)	{ onRelease(); }	// only if callback is defined
+			if (onRelease)	{ onRelease(Pin); }	// only if callback is defined
 			#if defined(DBG_SEQBUTTON)
 				Serial.print("Release\n");
 				dbg = false;
