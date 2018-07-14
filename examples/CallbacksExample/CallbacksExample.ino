@@ -10,6 +10,7 @@
   This example code is in the public domain.
 
   created 20 March 2017
+  modified 14 July 2018
   by SMFSW
  */
 
@@ -17,12 +18,14 @@
 
 SeqButton	but1, but2;				// Declare buttons
 
-void ToggleLED(void)
+void ToggleLED(uint8_t pin)
 {
 	static boolean LEDState = LOW;	// State HIGH/LOW
-	
+
 	LEDState = !LEDState;			// Change LED
 	digitalWrite(13, LEDState);		// turn the LED into LEDState
+
+	(void) pin;	// Dummy read of pin to avoid warning by compiler
 }
 
 // the setup function runs once when you press reset or power the board

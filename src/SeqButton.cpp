@@ -22,29 +22,29 @@
 #define		TIME	millis()
 
 
-void SeqButton::init(const uint8_t pin, void (*cbckON)(void), void (*cbckOFF)(void), const bool repeat, const bool logic, const uint32_t filter)
+void SeqButton::init(const uint8_t pin, void (*cbckON)(uint8_t), void (*cbckOFF)(uint8_t), const bool repeat, const bool logic, const uint32_t filter)
 {
 	#if defined(DBG_SEQBUTTON)
 		Serial.begin(115200);
 	#endif
-	
+
 	pinMode(pin, INPUT_PULLUP);
-	
+
 	Pin = pin;
 	Logic = logic;
 	Repeat = repeat;
 	timFilter = filter;
-	
+
 	onPush = cbckON;
 	onRelease = cbckOFF;
-	
+
 	pusDone = false;
 	relDone = true;
 	butState = LOW;
 	memTime = TIME;
 }
 
-void SeqButton::init(const uint8_t pin, void (*cbckON)(void), void (*cbckOFF)(void))
+void SeqButton::init(const uint8_t pin, void (*cbckON)(uint8_t), void (*cbckOFF)(uint8_t))
 {
 	init(pin, cbckON, cbckOFF, false, LOW, 50);
 }
@@ -54,7 +54,7 @@ bool SeqButton::handler(void)
 	#if defined(DBG_SEQBUTTON)
 		static bool dbg = false;
 	#endif
-	
+
 	if (digitalRead(Pin) == Logic)
 	{
 		if (TIME - memTime >= timFilter)
@@ -63,13 +63,13 @@ bool SeqButton::handler(void)
 			butState = HIGH;
 			if (!pusDone)
 			{
-				if(onPush)	// only if callback is defined
+				if (onPush)	// only if callback is defined
 				{
 					#if defined(DBG_SEQBUTTON)
 						Serial.print("Push\n");
 						dbg = true;
 					#endif
-					onPush();
+					onPush(Pin);
 				}
 			}
 			if (!Repeat)	{ pusDone = true; }
@@ -80,18 +80,18 @@ bool SeqButton::handler(void)
 		memTime = TIME;
 		pusDone = false;
 		butState = LOW;
-		
+
 		if (!relDone)
 		{
 			relDone = true;
-			if (onRelease)	{ onRelease(); }	// only if callback is defined
+			if (onRelease)	{ onRelease(Pin); }	// only if callback is defined
 			#if defined(DBG_SEQBUTTON)
 				Serial.print("Release\n");
 				dbg = false;
 			#endif
 		}
 	}
-	
+
 	return butState;
 }
 

@@ -10,6 +10,7 @@
   This example code is in the public domain.
 
   created 20 March 2017
+  modified 14 July 2018
   by SMFSW
  */
 
@@ -17,15 +18,19 @@
 
 SeqButton	but;				// Declare button
 
-void callbackPush(void)
+void callbackPush(uint8_t pin)
 {
 	digitalWrite(13, HIGH);		// turn the LED ON
+
+	(void) pin;	// Dummy read of pin to avoid warning by compiler
 }
 
-void callbackRelease(void)
+void callbackRelease(uint8_t pin)
 {
 	delay(1000);
 	digitalWrite(13, LOW);		// turn the LED OFF
+
+	(void) pin;	// Dummy read of pin to avoid warning by compiler
 }
 
 // the setup function runs once when you press reset or power the board

@@ -12,6 +12,8 @@ SeqButton	KEYWORD1
 #######################################
 init	KEYWORD2
 handler	KEYWORD2
+getPin	KEYWORD2
+getState	KEYWORD2
 getButton	KEYWORD2
 
 #######################################

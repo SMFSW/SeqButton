@@ -16,7 +16,8 @@ Handling filtered button press with callbacks for push (with or without repeat) 
   - `logic`: Button logic: `LOW` for NO / `HIGH` for NC (internal pullup for input is enabled)
   - `filter`: filtering time (in ms)
 - Call the handler in a loop using `sb.handler()` -> handler returns the current button value (if needed)
-- `sb.getButton()` can be used to get current button state at any time
+- `sb.getState()` or `sb.getButton()` can be used to get current button state at any time
+- `sb.getPin()` can be used to check pin assigned to instance
 
 ## Examples included
 

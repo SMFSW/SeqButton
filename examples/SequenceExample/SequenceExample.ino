@@ -5,6 +5,7 @@
   This example code is in the public domain.
 
   created 20 January 2018
+  modified 14 July 2018
   by SMFSW
  */
 
@@ -19,16 +20,12 @@
 
 #define Action_cback(name, msg)			void Msg_##name() { Serial.println(msg); }
 
-#define AddToSequence_cback(name, v)	void Add_##name() { sequence_append(v, seq_tab, sizeof(seq_tab), &idx_seq_tab); \
-															mem_timeout = millis(); }
-
 
 typedef struct sequence {	// Sequence structure and output message
 	uint8_t	seq[5];
 	uint8_t	nb;
 	void (*action)(void);
 } sequence;
-
 
 SeqButton		but1, but2, but3;				// Declare buttons instances
 SeqButton *		buttons[3] = { &but1, &but2, &but3 };
@@ -38,10 +35,6 @@ uint8_t idx_seq_tab;		// Variable holding current index in the sequence tab
 
 uint32_t mem_timeout = 0;	// Timeout for sequence
 
-
-AddToSequence_cback(b1, k1);
-AddToSequence_cback(b2, k2);
-AddToSequence_cback(b3, k3);
 
 Action_cback(seq1, "Try again!");
 Action_cback(seq2, "Niaga yrt!");
@@ -71,9 +64,9 @@ void setup() {
 	sequence_reset(seq_tab, sizeof(seq_tab), &idx_seq_tab);
 
 	// initialize the button with callbacks on push/release (no repeat)
-	but1.init(2, &Add_b1);	// Button on D2
-	but2.init(3, &Add_b2);	// Button on D3
-	but3.init(4, &Add_b3);	// Button on D4
+	but1.init(2, &AddToSequence_cback);	// Button on D2
+	but2.init(3, &AddToSequence_cback);	// Button on D3
+	but3.init(4, &AddToSequence_cback);	// Button on D4
 }
 
 // the loop function runs over and over again forever
@@ -81,6 +74,11 @@ void loop() {
 	for (unsigned int i = 0 ; i < (sizeof(buttons) / sizeof(SeqButton*)) ; i++)		{ buttons[i]->handler(); }
 	sequence_handler(seq, sizeof(seq) / sizeof(sequence), seq_tab, sizeof(seq_tab), &idx_seq_tab);
 }
+
+
+void AddToSequence_cback(uint8_t pin) {
+	sequence_append(pin - 1, seq_tab, sizeof(seq_tab), &idx_seq_tab);	// pin - 1 : buttons on pins 2, 3, 4
+	mem_timeout = millis(); }
 
 
 void sequence_handler(sequence * pMatch, const uint8_t szMatch, uint8_t * pSeq, const uint8_t szSeq, uint8_t * pIdx) {
@@ -102,26 +100,26 @@ void sequence_append(uint8_t val, uint8_t * pSeq, const uint8_t szSeq, uint8_t *
 	if (*pIdx < szSeq)	{ pSeq[(*pIdx)++] = val; }	// Tab not totally filled, append value to current cell & increment
 	else											// Tab totally filled
 	{
-		memcpy(&pSeq[0], &pSeq[1], szSeq-1);			// Move cells to cells-1
-		pSeq[*pIdx - 1] = val;							// Append value to last cell
+		memcpy(&pSeq[0], &pSeq[1], szSeq-1);		// Move cells to cells-1
+		pSeq[*pIdx - 1] = val;						// Append value to last cell
 	}
 }
 
 void sequence_find(sequence * pMatch, const uint8_t szMatch, uint8_t * pSeq, const uint8_t szSeq, uint8_t * pIdx)
 {
 	bool seq_found = false;
-	
-	pMatch = &pMatch[szMatch - 1];								// Sequence pointer positioned on last entry
-	for (int s = 0 ; s < szMatch ; s++)							// Sequence to check loop
+
+	pMatch = &pMatch[szMatch - 1];							// Sequence pointer positioned on last entry
+	for (int s = 0 ; s < szMatch ; s++)						// Sequence to check loop
 	{
-		for (int j = 0 ; j < szSeq ; j++)						// Input sequence positioning loop
+		for (int j = 0 ; j < szSeq ; j++)					// Input sequence positioning loop
 		{
 			// If check sequence length is greater than remaining input sequence, break input sequence positioning loop
 			if (pMatch->nb > (szSeq - j))	{ break; }
-			
-			for (int i = 0, idx = j; i < pMatch->nb ; i++)		// Match check loop
+
+			for (int i = 0, idx = j; i < pMatch->nb ; i++)	// Match check loop
 			{
-				if (pMatch->seq[i] == pSeq[idx])				// Matching
+				if (pMatch->seq[i] == pSeq[idx])			// Matching
 				{
 					// If numbers of cells validated correspond to sequence size, sequence is found
 					if (i == pMatch->nb - 1)	{ seq_found = true; }
@@ -131,12 +129,12 @@ void sequence_find(sequence * pMatch, const uint8_t szMatch, uint8_t * pSeq, con
 				else break;										// Not matching, break match check loop
 			}
 		}
-		
+
 		if (seq_found)	{ break; }	// If sequence is found, break current sequence to check loop
 		pMatch--;					// Previous sequence
 	}
-	
+
 	if (seq_found)	{ pMatch->action(); }	// Execute action if sequence found
-	
+
 	sequence_reset(pSeq, szSeq, pIdx);		// Reset sequence
 }
