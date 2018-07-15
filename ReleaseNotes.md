@@ -9,7 +9,10 @@ Feel free to share your thoughts @ xgarmanboziax@gmail.com about:
 ------------
 
 ** Actual:
-v1.4	3 May 2018:
+v1.4.1	15 July 2018:
+- Added TimingExample sketch
+
+v1.4	14 July 2018:
 - Adding passing pin number in callbacks (and updated examples) - addressing issue #1
 - Adding support for unit tests and doxygen documentation generation with Travis CI
 - Updated README.md

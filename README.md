@@ -27,6 +27,7 @@ Handling filtered button press with callbacks for push (with or without repeat) 
 - [OffTimerButton.ino](examples/OffTimerButton/OffTimerButton.ino): Turns a LED on when button is pressed, turning off 1s after release
 - [RepeatButton.ino](examples/RepeatButton/RepeatButton.ino): Toggle a LED repeatedly when button pressed
 - [SequenceExample.ino](examples/SequenceExample/SequenceExample.ino): Prints messages to serial depending on sequence read from inputs
+- [TimingExample.ino](examples/TimingExample/TimingExample.ino): Toggle a LED at each push on button 1 or 2 if held for more than 1s
 - [ToggleButton.ino](examples/ToggleButton/ToggleButton.ino): Toggle a LED at each button press
 
 ## Documentation
