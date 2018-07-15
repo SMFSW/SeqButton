@@ -1,0 +1,6 @@
+<map id="SeqButton::getHoldTime" name="SeqButton::getHoldTime">
+<area shape="rect" id="node2" href="$_repeat_button_8ino.html#ad65be798a4946bd40b540ea78248f9ff" title="ToggleLED" alt="" coords="238,5,325,32"/>
+<area shape="rect" id="node4" href="$_timing_example_8ino.html#a91065d66909904e461949e941b14aae8" title="Release_callback" alt="" coords="219,56,344,83"/>
+<area shape="rect" id="node3" href="$_repeat_button_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="setup" alt="" coords="393,5,447,32"/>
+<area shape="rect" id="node5" href="$_timing_example_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="setup" alt="" coords="393,56,447,83"/>
+</map>

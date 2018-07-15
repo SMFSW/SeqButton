@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sequential Button (for Arduino)
-   &#160;<span id="projectnumber">1.4.1</span>
+   &#160;<span id="projectnumber">1.5</span>
    </div>
    <div id="projectbrief">Sequential Button library for Arduino documentation</div>
   </td>
@@ -83,8 +83,8 @@ Include dependency graph for RepeatButton.ino:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7cea88b30492d4a017a8e81df81f6f1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_repeat_button_8ino.html#a7cea88b30492d4a017a8e81df81f6f1a">ToggleLED</a> (uint8_t pin)</td></tr>
-<tr class="separator:a7cea88b30492d4a017a8e81df81f6f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad65be798a4946bd40b540ea78248f9ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_repeat_button_8ino.html#ad65be798a4946bd40b540ea78248f9ff">ToggleLED</a> (<a class="el" href="class_seq_button.html">SeqButton</a> *button)</td></tr>
+<tr class="separator:ad65be798a4946bd40b540ea78248f9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_repeat_button_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
 <tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_repeat_button_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
@@ -140,15 +140,16 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_repeat_button_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.png" border="0" usemap="#_repeat_button_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph" alt=""/></div>
 <map name="_repeat_button_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph" id="_repeat_button_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph">
-<area shape="rect" id="node2" href="class_seq_button.html#ad6feb68ebf7aeca0939fcd3b97ff5c12" title="Initialization routine. " alt="" coords="110,5,218,32"/>
-<area shape="rect" id="node3" href="_repeat_button_8ino.html#a7cea88b30492d4a017a8e81df81f6f1a" title="ToggleLED" alt="" coords="121,56,207,83"/>
+<area shape="rect" id="node2" href="class_seq_button.html#aa95ac2d9e067f191c30b6382df9af472" title="Initialization routine. " alt="" coords="110,5,218,32"/>
+<area shape="rect" id="node3" href="_repeat_button_8ino.html#ad65be798a4946bd40b540ea78248f9ff" title="ToggleLED" alt="" coords="121,56,207,83"/>
+<area shape="rect" id="node4" href="class_seq_button.html#a98fae05da4049e5d0c4c318dca33b9f6" title="Get button hold duration. " alt="" coords="267,56,432,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a7cea88b30492d4a017a8e81df81f6f1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cea88b30492d4a017a8e81df81f6f1a">&#9670;&nbsp;</a></span>ToggleLED()</h2>
+<a id="ad65be798a4946bd40b540ea78248f9ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65be798a4946bd40b540ea78248f9ff">&#9670;&nbsp;</a></span>ToggleLED()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,17 +157,25 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void ToggleLED </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_seq_button.html">SeqButton</a> *&#160;</td>
+          <td class="paramname"><em>button</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_repeat_button_8ino_ad65be798a4946bd40b540ea78248f9ff_cgraph.png" border="0" usemap="#_repeat_button_8ino_ad65be798a4946bd40b540ea78248f9ff_cgraph" alt=""/></div>
+<map name="_repeat_button_8ino_ad65be798a4946bd40b540ea78248f9ff_cgraph" id="_repeat_button_8ino_ad65be798a4946bd40b540ea78248f9ff_cgraph">
+<area shape="rect" id="node2" href="class_seq_button.html#a98fae05da4049e5d0c4c318dca33b9f6" title="Get button hold duration. " alt="" coords="141,5,307,32"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="_repeat_button_8ino_a7cea88b30492d4a017a8e81df81f6f1a_icgraph.png" border="0" usemap="#_repeat_button_8ino_a7cea88b30492d4a017a8e81df81f6f1a_icgraph" alt=""/></div>
-<map name="_repeat_button_8ino_a7cea88b30492d4a017a8e81df81f6f1a_icgraph" id="_repeat_button_8ino_a7cea88b30492d4a017a8e81df81f6f1a_icgraph">
+<div class="center"><img src="_repeat_button_8ino_ad65be798a4946bd40b540ea78248f9ff_icgraph.png" border="0" usemap="#_repeat_button_8ino_ad65be798a4946bd40b540ea78248f9ff_icgraph" alt=""/></div>
+<map name="_repeat_button_8ino_ad65be798a4946bd40b540ea78248f9ff_icgraph" id="_repeat_button_8ino_ad65be798a4946bd40b540ea78248f9ff_icgraph">
 <area shape="rect" id="node2" href="_repeat_button_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="setup" alt="" coords="142,5,197,32"/>
 </map>
 </div>

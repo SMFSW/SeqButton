@@ -1,6 +1,7 @@
 <map id="setup" name="setup">
 <area shape="rect" id="node2" href="$_sequence_example_8ino.html#a4bda7e667e8e48834078a75ba5dae9bb" title="sequence_reset" alt="" coords="132,5,247,32"/>
-<area shape="rect" id="node3" href="$class_seq_button.html#ad6feb68ebf7aeca0939fcd3b97ff5c12" title="Initialization routine. " alt="" coords="135,56,243,83"/>
-<area shape="rect" id="node4" href="$_sequence_example_8ino.html#a9ddca751fbaec4d0a2043fcfa4419115" title="AddToSequence_cback" alt="" coords="109,107,269,133"/>
-<area shape="rect" id="node5" href="$_sequence_example_8ino.html#a473c48257c25e5abb6b681e86067302e" title="sequence_append" alt="" coords="318,107,445,133"/>
+<area shape="rect" id="node3" href="$class_seq_button.html#aa95ac2d9e067f191c30b6382df9af472" title="Initialization routine. " alt="" coords="135,56,243,83"/>
+<area shape="rect" id="node4" href="$_sequence_example_8ino.html#a263b56a0a1a9850f66ceba231ef8de2b" title="AddToSequence_cback" alt="" coords="109,107,269,133"/>
+<area shape="rect" id="node5" href="$_sequence_example_8ino.html#a473c48257c25e5abb6b681e86067302e" title="sequence_append" alt="" coords="318,81,445,108"/>
+<area shape="rect" id="node6" href="$class_seq_button.html#a2bd1bd580496f1511a7d1a6812e96e3d" title="Get button pin. " alt="" coords="317,132,445,159"/>
 </map>

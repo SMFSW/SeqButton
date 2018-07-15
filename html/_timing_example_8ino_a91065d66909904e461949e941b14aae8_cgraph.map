@@ -1,0 +1,5 @@
+<map id="Release_callback" name="Release_callback">
+<area shape="rect" id="node2" href="$class_seq_button.html#a2bd1bd580496f1511a7d1a6812e96e3d" title="Get button pin. " alt="" coords="197,5,325,32"/>
+<area shape="rect" id="node3" href="$class_seq_button.html#a98fae05da4049e5d0c4c318dca33b9f6" title="Get button hold duration. " alt="" coords="179,56,344,83"/>
+<area shape="rect" id="node4" href="$_timing_example_8ino.html#a7cc7a19f0091ab1f650f7d4bfc17eb7e" title="ToggleLED" alt="" coords="218,107,305,133"/>
+</map>

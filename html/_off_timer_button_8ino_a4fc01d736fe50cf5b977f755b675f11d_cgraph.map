@@ -1,5 +1,5 @@
 <map id="setup" name="setup">
-<area shape="rect" id="node2" href="$class_seq_button.html#ad6feb68ebf7aeca0939fcd3b97ff5c12" title="Initialization routine. " alt="" coords="115,5,223,32"/>
-<area shape="rect" id="node3" href="$_off_timer_button_8ino.html#a1aacebbd59ddeaa0afa89de124ffb3ed" title="callbackPush" alt="" coords="119,56,219,83"/>
-<area shape="rect" id="node4" href="$_off_timer_button_8ino.html#a170aa0cdef4202daf4815a10fc2627c7" title="callbackRelease" alt="" coords="110,107,229,133"/>
+<area shape="rect" id="node2" href="$class_seq_button.html#aa95ac2d9e067f191c30b6382df9af472" title="Initialization routine. " alt="" coords="115,5,223,32"/>
+<area shape="rect" id="node3" href="$_off_timer_button_8ino.html#a7f4ed6a636f733dbf24b3abbbdf7ab49" title="callbackPush" alt="" coords="119,56,219,83"/>
+<area shape="rect" id="node4" href="$_off_timer_button_8ino.html#ac8c883dfaf1871d43839e6d4350c5d3d" title="callbackRelease" alt="" coords="110,107,229,133"/>
 </map>
