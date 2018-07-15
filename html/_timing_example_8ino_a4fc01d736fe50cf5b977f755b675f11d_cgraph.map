@@ -1,0 +1,6 @@
+<map id="setup" name="setup">
+<area shape="rect" id="node2" href="$class_seq_button.html#ad6feb68ebf7aeca0939fcd3b97ff5c12" title="Initialization routine. " alt="" coords="118,5,226,32"/>
+<area shape="rect" id="node3" href="$_timing_example_8ino.html#ad610c702bc78f13b755042b810fd1096" title="Push_callback" alt="" coords="119,56,225,83"/>
+<area shape="rect" id="node4" href="$_timing_example_8ino.html#aa94e352afdc6c35c57b9bcebe49a3dc2" title="Release_callback" alt="" coords="109,107,235,133"/>
+<area shape="rect" id="node5" href="$_timing_example_8ino.html#a7cc7a19f0091ab1f650f7d4bfc17eb7e" title="ToggleLED" alt="" coords="283,107,370,133"/>
+</map>

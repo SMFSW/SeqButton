@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['repeatbutton_2eino',['RepeatButton.ino',['../_repeat_button_8ino.html',1,'']]],
-  ['resetcombination_5fcback',['ResetCombination_cback',['../_combination_example_8ino.html#ab14e9893b347a75c3ad7a108930d83b4',1,'CombinationExample.ino']]]
+  ['push_5fcallback',['Push_callback',['../_timing_example_8ino.html#ad610c702bc78f13b755042b810fd1096',1,'TimingExample.ino']]]
 ];

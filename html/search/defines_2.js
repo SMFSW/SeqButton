@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sequence_5ftimeout',['SEQUENCE_TIMEOUT',['../_sequence_example_8ino.html#a3cce0c4b2bca774b9cc11b9e111d14cc',1,'SequenceExample.ino']]]
+  ['hold_5ftime',['HOLD_TIME',['../_timing_example_8ino.html#a3f171629948a6f7ad5c9e9a4d9f1366c',1,'TimingExample.ino']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['k1',['k1',['../_sequence_example_8ino.html#aa786777ce0a77f3d766d53dfa93da3d7',1,'SequenceExample.ino']]],
-  ['k2',['k2',['../_sequence_example_8ino.html#a6d1b20b7746f8fe1eb340b8b6bf08a9e',1,'SequenceExample.ino']]],
-  ['k3',['k3',['../_sequence_example_8ino.html#a0d5999b0939a7ef7c0ba416f475ccf40',1,'SequenceExample.ino']]]
+  ['b1_5fpin',['B1_PIN',['../_timing_example_8ino.html#a5b0fae26de5c704263e74bf5c8ca2e2c',1,'TimingExample.ino']]],
+  ['b2_5fpin',['B2_PIN',['../_timing_example_8ino.html#a7ffacfcc25f5ebb8595dfe205d325b90',1,'TimingExample.ino']]],
+  ['b3_5fpin',['B3_PIN',['../_timing_example_8ino.html#a3514ea64ac6b44753d36bb3e139bb853',1,'TimingExample.ino']]]
 ];

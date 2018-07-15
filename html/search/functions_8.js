@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['toggleled',['ToggleLED',['../_advanced_button_8ino.html#a7cea88b30492d4a017a8e81df81f6f1a',1,'ToggleLED(uint8_t pin):&#160;AdvancedButton.ino'],['../_callbacks_example_8ino.html#a7cea88b30492d4a017a8e81df81f6f1a',1,'ToggleLED(uint8_t pin):&#160;CallbacksExample.ino'],['../_repeat_button_8ino.html#a7cea88b30492d4a017a8e81df81f6f1a',1,'ToggleLED(uint8_t pin):&#160;RepeatButton.ino'],['../_toggle_button_8ino.html#a7cea88b30492d4a017a8e81df81f6f1a',1,'ToggleLED(uint8_t pin):&#160;ToggleButton.ino']]],
-  ['treat_5fcombination',['treat_combination',['../_combination_example_8ino.html#a8341c3209b1667909461e910a97a275d',1,'CombinationExample.ino']]]
+  ['sequence_5fappend',['sequence_append',['../_sequence_example_8ino.html#a473c48257c25e5abb6b681e86067302e',1,'SequenceExample.ino']]],
+  ['sequence_5ffind',['sequence_find',['../_sequence_example_8ino.html#aefbeed7d4519895fcaf80262256a5532',1,'SequenceExample.ino']]],
+  ['sequence_5fhandler',['sequence_handler',['../_sequence_example_8ino.html#a4524d1f124ed97feaf42018238b8587c',1,'SequenceExample.ino']]],
+  ['sequence_5freset',['sequence_reset',['../_sequence_example_8ino.html#a4bda7e667e8e48834078a75ba5dae9bb',1,'SequenceExample.ino']]],
+  ['setcombination_5fcback',['SetCombination_cback',['../_combination_example_8ino.html#a4d245a105b334cb92e35efd4e753c924',1,'CombinationExample.ino']]],
+  ['setup',['setup',['../_advanced_button_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;AdvancedButton.ino'],['../_callbacks_example_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;CallbacksExample.ino'],['../_combination_example_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;CombinationExample.ino'],['../_off_timer_button_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;OffTimerButton.ino'],['../_repeat_button_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;RepeatButton.ino'],['../_sequence_example_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;SequenceExample.ino'],['../_timing_example_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;TimingExample.ino'],['../_toggle_button_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;ToggleButton.ino']]]
 ];
