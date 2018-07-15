@@ -38,9 +38,12 @@ void SeqButton::init(const uint8_t pin, void (*cbckON)(SeqButton*), void (*cbckO
 	onPush = cbckON;
 	onRelease = cbckOFF;
 
+	holdDone = false;
 	pusDone = false;
 	relDone = true;
+
 	butState = LOW;
+	holdTime = 0;
 	memTime = TIME;
 }
 
