@@ -7,7 +7,7 @@
   This example code is in the public domain.
 
   created 20 January 2018
-  modified 14 July 2018
+  modified 15 July 2018
   by SMFSW
  */
 
@@ -39,11 +39,11 @@ void loop() {
 }
 
 
-void SetCombination_cback(uint8_t pin) {
-	combination |= (1 << (pin - 2)); }
+void SetCombination_cback(SeqButton * button) {
+	combination |= (1 << (button->getPin() - 2)); }
 
-void ResetCombination_cback(uint8_t pin) {
-	combination &= ~(1 << (pin - 2)); }
+void ResetCombination_cback(SeqButton * button) {
+	combination &= ~(1 << (button->getPin() - 2)); }
 
 
 uint8_t check_combination(uint8_t val) {

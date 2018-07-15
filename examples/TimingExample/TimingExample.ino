@@ -11,6 +11,7 @@
   This example code is in the public domain.
 
   created 15 July 2018
+  modified 15 July 2018
   by SMFSW
  */
 
@@ -23,7 +24,6 @@
 #define HOLD_TIME	1000	// Time to hold a button
 
 SeqButton	but1, but2, but3;		// Declare buttons
-uint32_t	time_b1, time_b2;		// Variables to keep track of time when buttons pushed
 
 void ToggleLED(void)
 {
@@ -43,50 +43,49 @@ void setup() {
 	pinMode(13, OUTPUT);
 
 	// initialize the buttons handled with callbacks on push & release
-	but1.init(B1_PIN, &Push_callback, &Release_callback);
-	but2.init(B2_PIN, &Push_callback, &Release_callback);
-	but3.init(B3_PIN, &Push_callback, &Release_callback);
+	but1.init(B1_PIN, NULL, &Release_callback);
+	but2.init(B2_PIN, NULL, &Release_callback);
+	but3.init(B3_PIN, NULL, &Release_callback);
 }
 
 // the loop function runs over and over again forever
 void loop() {
-	but1.handler();
-	but2.handler();
-	but3.handler();
-}
+	static SeqButton *	buttons[3] = { &but1, &but2, &but3 };
+	static uint32_t		buttons_time[3] = { 0, 0, 0 };
 
-void Push_callback(uint8_t pin) {
-	uint32_t * var;
-
-	switch (pin)
+	for (unsigned int i = 0 ; i < (sizeof(buttons) / sizeof(SeqButton*)) ; i++)
 	{
-		case B1_PIN:
-			var = &time_b1;
-			break;
+		buttons[i]->handler();
 
-		case B2_PIN:
-			var = &time_b2;
-			break;
+		if (buttons[i]->getState() == HIGH)
+		{
+			if (millis() - buttons_time[i] >= 1000)
+			{
+				buttons_time[i] = millis();
 
-		default:
-			return;
+				if (i == 0)			{ Serial.print("B1"); }
+				else if (i == 1)	{ Serial.print("B2"); }
+				else if (i == 2)	{ Serial.print("B3"); }
+				Serial.print(" held for: ");
+				Serial.print(buttons[i]->getHoldTime());
+				Serial.println("ms");
+			}
+		}
 	}
-
-	*var = millis();
 }
 
-void Release_callback(uint8_t pin) {
+void Release_callback(SeqButton * button) {
 	uint32_t time_push = 0;
 
-	switch (pin)
+	switch (button->getPin())
 	{
 		case B1_PIN:
-			time_push = millis() - time_b1;
+			time_push = button->getHoldTime();
 			Serial.print("B1 held for: ");
 			break;
 
 		case B2_PIN:
-			time_push = millis() - time_b2;
+			time_push = button->getHoldTime();
 			Serial.print("B2 held for: ");
 			break;
 

@@ -1,7 +1,7 @@
 /*!\file SeqButton.cpp
 ** \author SMFSW
-** \date 2017/11/21
-** \copyright BSD 3-Clause License (c) 2017, SMFSW
+** \date 2018/07/15
+** \copyright BSD 3-Clause License (c) 2017-2018, SMFSW
 ** \brief Sequential Button Arduino Library
 ** \details Handling filtered button press with callbacks for push (with or without repeat) and release, logic and filtering time
 **/
@@ -22,7 +22,7 @@
 #define		TIME	millis()
 
 
-void SeqButton::init(const uint8_t pin, void (*cbckON)(uint8_t), void (*cbckOFF)(uint8_t), const bool repeat, const bool logic, const uint32_t filter)
+void SeqButton::init(const uint8_t pin, void (*cbckON)(SeqButton*), void (*cbckOFF)(SeqButton*), const bool repeat, const bool logic, const uint32_t filter)
 {
 	#if defined(DBG_SEQBUTTON)
 		Serial.begin(115200);
@@ -44,7 +44,7 @@ void SeqButton::init(const uint8_t pin, void (*cbckON)(uint8_t), void (*cbckOFF)
 	memTime = TIME;
 }
 
-void SeqButton::init(const uint8_t pin, void (*cbckON)(uint8_t), void (*cbckOFF)(uint8_t))
+void SeqButton::init(const uint8_t pin, void (*cbckON)(SeqButton*), void (*cbckOFF)(SeqButton*))
 {
 	init(pin, cbckON, cbckOFF, false, LOW, 50);
 }
@@ -57,10 +57,11 @@ bool SeqButton::handler(void)
 
 	if (digitalRead(Pin) == Logic)
 	{
-		if (TIME - memTime >= timFilter)
+		if ((TIME - memTime >= timFilter) || (holdDone))
 		{
 			relDone = false;
 			butState = HIGH;
+
 			if (!pusDone)
 			{
 				if (onPush)	// only if callback is defined
@@ -69,22 +70,33 @@ bool SeqButton::handler(void)
 						Serial.print("Push\n");
 						dbg = true;
 					#endif
-					onPush(Pin);
+					onPush(this);
 				}
 			}
+
 			if (!Repeat)	{ pusDone = true; }
+
+			if (!holdDone)
+			{
+				memTime = TIME;		// Store current time for holdTime calculations
+				holdDone = true;
+			}
+
+			holdTime = TIME - memTime;
 		}
 	}
 	else
 	{
+		holdTime = TIME - memTime;	// Compute holdTime once more before memTime is re-written
 		memTime = TIME;
 		pusDone = false;
+		holdDone = false;
 		butState = LOW;
 
 		if (!relDone)
 		{
 			relDone = true;
-			if (onRelease)	{ onRelease(Pin); }	// only if callback is defined
+			if (onRelease)	{ onRelease(this); }	// only if callback is defined
 			#if defined(DBG_SEQBUTTON)
 				Serial.print("Release\n");
 				dbg = false;

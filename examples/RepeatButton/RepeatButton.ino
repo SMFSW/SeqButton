@@ -10,7 +10,7 @@
   This example code is in the public domain.
 
   created 20 March 2017
-  modified 14 July 2018
+  modified 15 July 2018
   by SMFSW
  */
 
@@ -18,23 +18,31 @@
 
 SeqButton	but;				// Declare button
 
-void ToggleLED(uint8_t pin)
+void ToggleLED(SeqButton * button)
 {
 	static boolean	LEDState = LOW;	// State HIGH/LOW
 	static long		lastTime = millis();
 
-	if ((millis() - lastTime) > 500)
+	if ((millis() - lastTime) >= 500)
 	{
 		lastTime = millis();
 		LEDState = !LEDState;			// Change LED
 		digitalWrite(13, LEDState);		// turn the LED into LEDState
+
+		Serial.print("Button held for: ");
+		Serial.print(button->getHoldTime());
+		Serial.println("ms");
 	}
 
-	(void) pin;	// Dummy read of pin to avoid warning by compiler
+	(void) button;	// Dummy read of instance to avoid warning by compiler
 }
 
 // the setup function runs once when you press reset or power the board
 void setup() {
+	// initialize serial
+	Serial.begin(115200);
+	//while (!Serial) { };			// wait for serial port to connect. Needed for Leonardo only
+
 	// initialize digital pin 13 as an output.
 	pinMode(13, OUTPUT);
 

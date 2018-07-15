@@ -8,7 +8,7 @@ Handling filtered button press with callbacks for push (with or without repeat) 
 
 - Declare a `SeqButton` instance (called `sb` below)
 - Create callback function(s) of type `void func()`
-- Initialize instance with `sb.init(uint8_t pin, void (*cbckON)(), void (*cbckOFF)(), bool repeat, bool logic=LOW, uint16_t filter=50)`
+- Initialize instance with `sb.init(uint8_t pin, void (*cbckON)(SeqButton*), void (*cbckOFF)(SeqButton*), bool repeat, bool logic=LOW, uint16_t filter=50)`
   - `pin`: pin on which button is connected
   - `cbckON`: callback function on press (`NULL` when no callback needed)
   - `cbckOFF`: callback function on release (`NULL` when no callback needed)
@@ -18,6 +18,7 @@ Handling filtered button press with callbacks for push (with or without repeat) 
 - Call the handler in a loop using `sb.handler()` -> handler returns the current button value (if needed)
 - `sb.getState()` or `sb.getButton()` can be used to get current button state at any time
 - `sb.getPin()` can be used to check pin assigned to instance
+- `sb.getHoldTime()` can be used on a release callback to get hold duration of button
 
 ## Examples included
 

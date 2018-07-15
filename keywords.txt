@@ -15,6 +15,7 @@ handler	KEYWORD2
 getPin	KEYWORD2
 getState	KEYWORD2
 getButton	KEYWORD2
+getHoldTime	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)

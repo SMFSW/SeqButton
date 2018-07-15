@@ -9,11 +9,14 @@ Feel free to share your thoughts @ xgarmanboziax@gmail.com about:
 ------------
 
 ** Actual:
+v1.5	15 July 2018:
+- Passing whole instance in callbacks instead of just pin - addressing [github issue #1](https://github.com/SMFSW/SeqButton/issues/1)
+
 v1.4.1	15 July 2018:
 - Added TimingExample sketch
 
 v1.4	14 July 2018:
-- Adding passing pin number in callbacks (and updated examples) - addressing issue #1
+- Adding passing pin number in callbacks (and updated examples) - addressing [github issue #1](https://github.com/SMFSW/SeqButton/issues/1)
 - Adding support for unit tests and doxygen documentation generation with Travis CI
 - Updated README.md
 

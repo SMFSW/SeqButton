@@ -5,7 +5,7 @@
   This example code is in the public domain.
 
   created 20 January 2018
-  modified 14 July 2018
+  modified 15 July 2018
   by SMFSW
  */
 
@@ -76,8 +76,8 @@ void loop() {
 }
 
 
-void AddToSequence_cback(uint8_t pin) {
-	sequence_append(pin - 1, seq_tab, sizeof(seq_tab), &idx_seq_tab);	// pin - 1 : buttons on pins 2, 3, 4
+void AddToSequence_cback(SeqButton * button) {
+	sequence_append(button->getPin() - 1, seq_tab, sizeof(seq_tab), &idx_seq_tab);	// pin - 1 : buttons on pins 2, 3, 4
 	mem_timeout = millis(); }
 
 
