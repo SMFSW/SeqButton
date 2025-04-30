@@ -1,4 +1,4 @@
-# SeqButton [![Build Status](https://travis-ci.com/SMFSW/SeqButton.svg?branch=master)](https://travis-ci.com/SMFSW/SeqButton)
+# SeqButton
 
 Sequential Button Arduino Library
 
