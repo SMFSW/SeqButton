@@ -1,4 +1,4 @@
-# SeqButton
+# SeqButton [![CodeFactor](https://www.codefactor.io/repository/github/smfsw/seqbutton/badge)](https://www.codefactor.io/repository/github/smfsw/seqbutton)
 
 Sequential Button Arduino Library
 
