@@ -1,4 +1,14 @@
-# SeqButton [![CodeFactor](https://www.codefactor.io/repository/github/smfsw/seqbutton/badge)](https://www.codefactor.io/repository/github/smfsw/seqbutton)
+# SeqButton
+
+[![author](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/auth_SMFSW.json)](https://github.com/SMFSW)
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/SeqButton_status_badge.json)
+[![license](https://img.shields.io/badge/License-BSD3-darkred.svg)](LICENSE)
+[![CodeFactor](https://www.codefactor.io/repository/github/smfsw/seqbutton/badge)](https://www.codefactor.io/repository/github/smfsw/seqbutton)
+
+![platform](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/platform_INO.json)
+
+[![doxy](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/tool_DOXY.json)](https://smfsw.github.io/SeqButton)
+[![re_note](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/tool_RN.json)](ReleaseNotes.md)
 
 Sequential Button Arduino Library
 
@@ -30,13 +40,3 @@ Handling filtered button press with callbacks for push (with or without repeat) 
 - [SequenceExample.ino](examples/SequenceExample/SequenceExample.ino): Prints messages to serial depending on sequence read from inputs
 - [TimingExample.ino](examples/TimingExample/TimingExample.ino): Toggle a LED at each push on button 1 or 2 if held for more than 1s
 - [ToggleButton.ino](examples/ToggleButton/ToggleButton.ino): Toggle a LED at each button press
-
-## Documentation
-
-Doxygen doc can be generated using "Doxyfile".
-
-See [generated documentation](https://smfsw.github.io/SeqButton/)
-
-## Release Notes
-
-See [release notes](ReleaseNotes.md)
